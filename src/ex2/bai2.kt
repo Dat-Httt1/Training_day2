@@ -1,3 +1,5 @@
+package ex2
+
 import java.util.Scanner
 import kotlin.math.PI
 
@@ -34,30 +36,24 @@ class Circle(x: Double, y: Double, private var radius: Double) : Point(x, y) {
     fun getDiameter(): Double {
         return 2 * radius
     }
-
     // Tính chu vi hình tròn
     fun getCircumference(): Double {
         return 2 * PI * radius
     }
-
     // Tính diện tích hình tròn
     fun getArea(): Double {
         return PI * radius * radius
     }
-
     override fun toString(): String {
         return "Circle tại tọa độ ${super.toString()} với bán kính $radius"
     }
 }
-
 // Hàm main()
 fun main() {
     val scanner = Scanner(System.`in`)
-
     print("Nhập số lượng hình tròn: ")
     val n = scanner.nextInt()
     val circles = mutableListOf<Circle>()
-
     // Nhập dữ liệu cho n hình tròn
     for (i in 1..n) {
         print("Nhập tọa độ x của hình tròn thứ $i: ")
@@ -66,10 +62,8 @@ fun main() {
         val y = scanner.nextDouble()
         print("Nhập bán kính của hình tròn thứ $i: ")
         val radius = scanner.nextDouble()
-
         circles.add(Circle(x, y, radius))
     }
-
     // Xuất thông tin đường kính, chu vi, diện tích của từng hình tròn
     println("\nThông tin các hình tròn:")
     for (circle in circles) {

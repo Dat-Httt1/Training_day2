@@ -1,4 +1,4 @@
-class Hinh {
+package ex3
     open class Hinh (var mau:String) {
         open fun TinhDienTich(): Double {
             return 0.0
@@ -10,4 +10,4 @@ class Hinh {
             return "Hình có màu: $mau"
         }
     }
-}
+

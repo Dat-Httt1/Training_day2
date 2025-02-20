@@ -1,3 +1,5 @@
+package ex3
+
 fun main() {
     val hinhChuNhat = HinhChuNhat("Xanh", 4.0, 5.0)
     val hinhTron = HinhTron("Đỏ", 3.0)

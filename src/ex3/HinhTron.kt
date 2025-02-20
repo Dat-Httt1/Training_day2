@@ -1,3 +1,5 @@
+package ex3
+
 import kotlin.math.PI
 class HinhTron(mau: String, private val bankinh: Double) : Hinh(mau) {
     override fun TinhDienTich(): Double {

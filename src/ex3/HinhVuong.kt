@@ -1,3 +1,5 @@
+package ex3
+
 class HinhVuong(
     mau: String,
     private val canh: Double
