@@ -3,12 +3,16 @@ package ex1
 data class Category(
     val id: String,
     val name: String,
-    val products: MutableList<Product> = mutableListOf())
+    val products: MutableList<Product> = mutableListOf()
+)
+
 data class Product(
     var id: String,
     var name: String,
     var price: Double,
-    var origin: String)
+    var origin: String
+)
+
 val categories = mutableListOf<Category>()
 fun addCategory() {
     print("Nhập mã danh mục: ")
@@ -17,6 +21,7 @@ fun addCategory() {
     val name = readLine()!!.trim()
     categories.add(Category(id, name))
 }
+
 fun addProduct() {
     print("Nhập mã danh mục chứa sản phẩm: ")
     val categoryId = readLine()!!.trim()
@@ -35,6 +40,7 @@ fun addProduct() {
         println("Danh mục không tồn tại!")
     }
 }
+
 fun showProductsByCategory() {
     print("Nhập mã danh mục cần xem sản phẩm: ")
     val categoryId = readLine()!!.trim()
@@ -46,6 +52,7 @@ fun showProductsByCategory() {
         println("Danh mục không tồn tại!")
     }
 }
+
 fun updateProduct() {
     print("Nhập mã sản phẩm cần cập nhật: ")
     val productId = readLine()!!.trim()
@@ -64,6 +71,7 @@ fun updateProduct() {
     }
     println("Không tìm thấy sản phẩm!")
 }
+
 fun deleteProduct() {
     print("Nhập mã sản phẩm cần xóa: ")
     val productId = readLine()!!.trim()
